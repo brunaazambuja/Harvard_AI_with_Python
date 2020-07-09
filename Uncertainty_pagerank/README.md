@@ -28,7 +28,7 @@ For that reason, the PageRank algorithm was created by Google’s co-founders (i
 
 One way to think about PageRank is with the random surfer model, which considers the behavior of a hypothetical surfer on the internet who clicks on links at random. Consider the **`corpus`** of web pages below, where an arrow between two pages indicates a link from one page to another.
 
-<img alt="Pagerank" src="https://https://github.com/brunaazambuja/Harvard_AI_with_Python/blob/master/Uncertainty_pagerank/assets/img1.png?raw=true" />
+<img alt="Pagerank" src="https://github.com/brunaazambuja/Harvard_AI_with_Python/blob/master/Uncertainty_pagerank/assets/img1.png?raw=true" />
 
 
 The random surfer model imagines a surfer who starts with a web page at random, and then randomly chooses links to follow. If the surfer is on Page 2, for example, they would randomly choose between Page 1 and Page 3 to visit next (duplicate links on the same page are treated as a single link, and links from a page to itself are ignored as well). If they chose Page 3, the surfer would then randomly choose between Page 2 and Page 4 to visit next.
@@ -41,7 +41,7 @@ By sampling states randomly from the Markov Chain, we can get an estimate for ea
 
 However, this definition of PageRank proves slightly problematic, if we consider a network of pages like the below.
 
-￼<img alt="Pagerank" src="https://https://github.com/brunaazambuja/Harvard_AI_with_Python/blob/master/Uncertainty_pagerank/assets/img2.png?raw=true" />
+￼<img alt="Pagerank" src="https://github.com/brunaazambuja/Harvard_AI_with_Python/blob/master/Uncertainty_pagerank/assets/img2.png?raw=true" />
 
 
 Imagine we randomly started by sampling Page 5. We’d then have no choice but to go to Page 6, and then no choice but to go to Page 5 after that, and then Page 6 again, and so forth. We’d end up with an estimate of 0.5 for the PageRank for Pages 5 and 6, and an estimate of 0 for the PageRank of all the remaining pages, since we spent all our time on Pages 5 and 6 and never visited any of the other pages.
@@ -63,7 +63,7 @@ For the second condition, we need to consider each possible page i that links to
 
 This gives us the following definition for the PageRank for a page p.
 
-￼<img alt="Pagerank" src="https://https://github.com/brunaazambuja/Harvard_AI_with_Python/blob/master/Uncertainty_pagerank/assets/img3.png?raw=true" />
+￼<img alt="Pagerank" src="https://github.com/brunaazambuja/Harvard_AI_with_Python/blob/master/Uncertainty_pagerank/assets/img3.png?raw=true" />
 
 
 In this formula, d is the damping factor, N is the total number of pages in the **`corpus`**, i ranges over all pages that link to page p, and NumLinks(i) is the number of links present on page i.

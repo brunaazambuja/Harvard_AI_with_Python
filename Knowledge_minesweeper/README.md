@@ -1,5 +1,5 @@
 # Minesweeper with Artificial Intelligence Aplication:
-<img alt="Minesweeper" src="https://github.com/brunaazambuja/Harvard_Course_AI_with_Python_Minesweeper_Application/blob/master/assets/images/game.png?raw=true" />
+<img alt="Minesweeper" src="https://github.com/brunaazambuja/Harvard_AI_with_Python/blob/master/Knowledge_minesweeper/assets/images/game.png?raw=true" />
 
 ## Background:
 ### Minesweeper:
@@ -7,7 +7,7 @@ Minesweeper is a puzzle game that consists of a grid of cells, where some of the
 
 In this 3x3 Minesweeper game, for example, the three **`1`** values indicate that each of those cells has one neighboring cell that is a mine. The four **`0`** values indicate that each of those cells has no neighboring mine.
 
-<img alt="Minesweeper" src="https://github.com/brunaazambuja/Harvard_Course_AI_with_Python_Minesweeper_Application/blob/master/assets/images/img1.png?raw=true" />
+<img alt="Minesweeper" src="https://github.com/brunaazambuja/Harvard_AI_with_Python/blob/master/Knowledge_minesweeper/assets/images/img1.png?raw=true" />
 
 Given this information, a logical player could conclude that there must be a mine in the lower-right cell and that there is no mine in the upper-left cell, for only in that case would the numerical labels on each of the other cells be accurate.
 
@@ -21,7 +21,7 @@ One way we could represent an AI’s knowledge about a Minesweeper game is by ma
 
 What information does the AI have access to? Well, the AI would know every time a safe cell is clicked on and would get to see the number for that cell. Consider the following Minesweeper board, where the middle cell has been revealed, and the other cells have been labeled with an identifying letter for the sake of discussion.
 
-<img alt="Minesweeper" src="https://github.com/brunaazambuja/Harvard_Course_AI_with_Python_Minesweeper_Application/blob/master/assets/images/img2.png?raw=true" />
+<img alt="Minesweeper" src="https://github.com/brunaazambuja/Harvard_AI_with_Python/blob/master/Knowledge_minesweeper/assets/images/img2.png?raw=true" />
 
 What information do we have now? It appears we now know that one of the eight neighboring cells is a mine. Therefore, we could write a logical expression like the below to indicate that one of the neighboring cells is a mine.
 ```
@@ -54,13 +54,13 @@ Every logical sentence in this representation has two parts: a set of **`cells`*
 
 Why is this a useful representation? In part, it lends itself well to certain types of inference. Consider the game below.
 
-<img alt="Minesweeper" src="https://github.com/brunaazambuja/Harvard_Course_AI_with_Python_Minesweeper_Application/blob/master/assets/images/img3.png?raw=true" />
+<img alt="Minesweeper" src="https://github.com/brunaazambuja/Harvard_AI_with_Python/blob/master/Knowledge_minesweeper/assets/images/img3.png?raw=true" />
 
 Using the knowledge from the lower-left number, we could construct the sentence **`{D, E, G} = 0`** to mean that out of cells D, E, and G, exactly 0 of them are mines. Intuitively, we can infer from that sentence that all of the cells must be safe. By extension, any time we have a sentence whose **`count`** is 0, we know that all of that sentence’s **`cells`** must be safe.
 
 Similarly, consider the game below.
 
-<img alt="Minesweeper" src="https://github.com/brunaazambuja/Harvard_Course_AI_with_Python_Minesweeper_Application/blob/master/assets/images/img4.png?raw=true" />
+<img alt="Minesweeper" src="https://github.com/brunaazambuja/Harvard_AI_with_Python/blob/master/Knowledge_minesweeper/assets/images/img4.png?raw=true" />
 
 Our AI would construct the sentence **`{E, F, H} = 3`**. Intuitively, we can infer that all of E, F, and H are mines. More generally, any time the number of cells is equal to the count, we know that all of that sentence’s cells must be mines.
 
@@ -72,7 +72,7 @@ Likewise, if our AI knew the sentence **`{A, B, C} = 2`**, and we were told that
 
 If we’re being even more clever, there’s one final type of inference we can do.
 
-<img alt="Minesweeper" src="https://github.com/brunaazambuja/Harvard_Course_AI_with_Python_Minesweeper_Application/blob/master/assets/images/img5.png?raw=true" />
+<img alt="Minesweeper" src="https://github.com/brunaazambuja/Harvard_AI_with_Python/blob/master/Knowledge_minesweeper/assets/images/img5.png?raw=true" />
 
 Consider just the two sentences our AI would know based on the top middle cell and the bottom middle cell. From the top middle cell, we have **`{A, B, C} = 1`**. From the bottom middle cell, we have **`{A, B, C, D, E} = 2`**. Logically, we could then infer a new piece of knowledge, that **`{D, E} = 1`**. After all, if two of A, B, C, D, and E are mines, and only one of A, B, and C are mines, then it stands to reason that exactly one of D and E must be the other mine.
 

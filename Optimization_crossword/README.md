@@ -1,13 +1,13 @@
 # Crosswords with Artificial Intelligence Application:
 Write an AI to generate crossword puzzles.
 
-<img alt="Crosswords" src="https://github.com/brunaazambuja/Harvard_Course_AI_with_Python_Crossword_Application/blob/master/assets/img1.png?raw=true" />
+<img alt="Crosswords" src="https://github.com/brunaazambuja/Harvard_AI_with_Python/blob/master/Optimization_crossword/assets/img1.png?raw=true" />
 
 # Background:
 
 How might you go about generating a crossword puzzle? Given the structure of a crossword puzzle (i.e., which squares of the grid are meant to be filled in with a letter), and a list of words to use, the problem becomes one of choosing which words should go in each vertical or horizontal sequence of squares. We can model this sort of problem as a constraint satisfaction problem. Each sequence of squares is one variable, for which we need to decide on its value (which word in the domain of possible words will fill in that sequence). Consider the following crossword puzzle structure.
 
-<img alt="Crosswords" src="https://github.com/brunaazambuja/Harvard_Course_AI_with_Python_Crossword_Application/blob/master/assets/images/structure.png?raw=true" />
+<img alt="Crosswords" src="https://github.com/brunaazambuja/Harvard_AI_with_Python/blob/master/Optimization_crossword/assets/images/structure.png?raw=true" />
 
 In this structure, we have four variables, representing the four words we need to fill into this crossword puzzle (each indicated by a number in the above image). Each variable is defined by four values: the row it begins on (its i value), the column it begins on (its j value), the direction of the word (either down or across), and the length of the word. Variable 1, for example, would be a variable represented by a row of 1 (assuming 0 indexed counting from the top), a column of 1 (also assuming 0 indexed counting from the left), a direction of across, and a length of 4.
 
