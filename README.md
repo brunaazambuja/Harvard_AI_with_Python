@@ -6,29 +6,29 @@ This course explores the concepts and algorithms at the foundation of modern art
 Prerequisites: CS50x or at least one year of experience with Python.
 
 ## What we worked with:
-**`- Searching algorithms;`**
+- **` Searching algorithms;`**
     - **Projects:**
         - Degrees: finding the shortest path between any two actors by choosing a sequence of movies that connects them.
         - TicTacToe: developed AI that plays tictactoe with the user, and never loses.
-**`- Representation of knowledge;`**
+- **` Representation of knowledge;`**
     - **Projects:**
         - Knights: developed AI that discovers the solution to the knights and knaves game.
         - Minesweeper: developed AI that plays minesweeper.
-**`- Uncertainty;`**
+- **` Uncertainty;`**
     - **Projects:**
         - Heredity: developed an AI to assess the likelihood that a person will have a particular genetic trait.
         - PageRank: developed an AI to rank web pages by importance.
-**`- Optimization process algorithms;`**
+- **` Optimization process algorithms;`**
     - **Projects:**
         - Crossword: developed an AI that solves crosswords, given the structure and a database of words.
-**`- Machine Learning, training and keeping experience - supervised, reinforcement and unsupervised learning;`**
+- **` Machine Learning, training and keeping experience - supervised, reinforcement and unsupervised learning;`**
     - **Projects:**
         - Shopping: developed an AI that predict whether online shopping customers will complete a purchase.
         - Nim: developed an AI that teaches itself to play Nim through reinforcement learning.
-**`- Neural Networks - Deep learning, Convolutional, Linear (Perceptron), Recurrent, FeedForward Neural Networks;`**
+- **` Neural Networks - Deep learning, Convolutional, Linear (Perceptron), Recurrent, FeedForward Neural Networks;`**
     - **Projects:**
         - TrafficSigns: developed an AI to identify which traffic sign appears in a photograph.
-**`- Language - How computers processes our language.`**
+- **` Language - How computers processes our language.`**
     - **Projects:**
         - Parser: developed an AI to parse sentences and extract noun phrases.
         - Questions: developed an AI to answer questions.
